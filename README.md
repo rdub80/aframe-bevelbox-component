@@ -4,9 +4,25 @@ A Bevelbox component for [A-Frame](https://aframe.io).
 
 ### API
 
-| Property | Description | Default Value |
-| -------- | ----------- | ------------- |
-|          |             |               |
+| Property          | Description | Default Value |
+| ----------------  | ----------- | ------------- |
+|                   |             |               |
+| width             |             | 1             |
+| height            |             | 1             |
+| depth             |             | 1             |
+|                   |             |               |
+| topLeftRadius     |             | 0.00001       |
+| topRightRadius    |             | 0.00001       |
+| bottomLeftRadius  |             | 0.00001       |
+| bottomRightRadius |             | 0.00001       |
+|                   |             |               |
+| bevelEnabled      | enable or disable beveling true/false| true          |
+| bevelSegments     |             | 2             |
+| steps             |             | 1             |
+| bevelSize         |             | 0.1           |
+| bevelOffset       |             | 0             |
+| bevelThickness    |             | 0.1           |
+
 
 ### Installation
 
@@ -23,7 +39,27 @@ Install and use by directly including the [browser files](dist):
 
 <body>
   <a-scene>
-    <a-entity bevelbox="exampleProp: exampleVal"></a-entity>
+
+      <a-entity bevelbox="
+                width: 0.5;
+                height: 0.5;
+                depth: 0.5;
+
+                topLeftRadius: 0.05;
+                topRightRadius: 0.05;
+                bottomLeftRadius: 0.05;
+                bottomRightRadius: 0.05;
+
+                bevelEnabled: true;
+                bevelSegments: 10;
+                steps: 1;
+                bevelSize: 0.05;
+                bevelOffset: 0;
+                bevelThickness: 0.05;
+                " 
+      material="color:#EF2D5E;"
+      ></a-entity>
+
   </a-scene>
 </body>
 ```
